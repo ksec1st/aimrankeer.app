@@ -10,222 +10,41 @@
 <div class="background-grid"></div>
 <header class="header">
 <div class="header-inner">
-<div><p class="eyebrow">ESPORTS CLUB</p><h1>AIM SCORE <span>RANKING</span></h1></div><button id="adminButton" class="admin-button">⚙ 管理</button>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- Loading -->
-    <div id="loading" class="loading">
-      <div class="loading-spinner"></div>
-      <p>ランキングを読み込んでいます...</p>
-    </div>
-
-
-    <!-- Ranking -->
-    <section id="rankingSection" class="ranking-section hidden">
-
-      <div class="section-title">
-        <div>
-          <p class="eyebrow">CURRENT RANKING</p>
-          <h2>現在のランキング</h2>
-        </div>
-
-        <button id="refreshButton" class="refresh-button">
-          ↻ 更新
-        </button>
-      </div>
-
-
-      <!-- TOP 3 -->
-      <div id="topThree" class="top-three"></div>
-
-
-      <!-- Other Rankings -->
-      <div id="rankingList" class="ranking-list"></div>
-
-    </section>
-
-
-    <!-- Admin -->
-    <section id="adminSection" class="admin-section hidden">
-
-      <div class="admin-header">
-
-        <div>
-          <p class="eyebrow">ADMINISTRATION</p>
-          <h2>管理画面</h2>
-        </div>
-
-        <button id="logoutButton" class="logout-button">
-          管理モード終了
-        </button>
-
-      </div>
-
-
-      <!-- Add Member -->
-      <div class="admin-card">
-
-        <h3>＋ メンバー追加</h3>
-
-        <form id="addMemberForm">
-
-          <div class="form-row">
-
-            <div class="form-group">
-              <label for="memberName">
-                メンバー名
-              </label>
-
-              <input
-                id="memberName"
-                type="text"
-                placeholder="例：Player A"
-                maxlength="30"
-                required
-              >
-            </div>
-
-
-            <div class="form-group">
-              <label for="memberScore">
-                AIMスコア
-              </label>
-
-              <input
-                id="memberScore"
-                type="number"
-                min="0"
-                placeholder="98520"
-                required
-              >
-            </div>
-
-          </div>
-
-          <button
-            type="submit"
-            class="primary-button"
-          >
-            メンバーを追加
-          </button>
-
-        </form>
-
-      </div>
-
-
-      <!-- Member Management -->
-      <div class="admin-card">
-
-        <h3>メンバー管理</h3>
-
-        <div id="adminMemberList"></div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- Admin Login Modal -->
-  <div id="loginModal" class="modal hidden">
-
-    <div class="modal-overlay"></div>
-
-    <div class="modal-box">
-
-      <button id="closeModal" class="modal-close">
-        ×
-      </button>
-
-      <p class="eyebrow">ADMIN ACCESS</p>
-
-      <h2>管理者ログイン</h2>
-
-      <p class="modal-description">
-        管理操作を行うには管理PINを入力してください。
-      </p>
-
-      <form id="loginForm">
-
-        <input
-          id="adminPin"
-          type="password"
-          inputmode="numeric"
-          placeholder="管理PIN"
-          autocomplete="off"
-          required
-        >
-
-        <button
-          type="submit"
-          class="primary-button"
-        >
-          管理画面へ
-        </button>
-
-      </form>
-
-      <p id="loginError" class="error-message"></p>
-
-    </div>
-
-  </div>
-
-
-  <!-- Score Edit Modal -->
-  <div id="editModal" class="modal hidden">
-
-    <div class="modal-overlay"></div>
-
-    <div class="modal-box">
-
-      <button id="closeEditModal" class="modal-close">
-        ×
-      </button>
-
-      <p class="eyebrow">UPDATE SCORE</p>
-
-      <h2 id="editMemberName">
-        スコア変更
-      </h2>
-
-      <form id="editScoreForm">
-
-        <input
-          id="editScore"
-          type="number"
-          min="0"
-          placeholder="新しいスコア"
-          required
-        >
-
-        <button
-          type="submit"
-          class="primary-button"
-        >
-          スコアを更新
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-
-
-  <!-- Toast -->
-  <div id="toast" class="toast"></div>
-
-
-  <script src="script.js"></script>
-
+<div><p class="eyebrow">Kyoto Shoei Esports Club</p><h1>AIM SCORE<span>RANKING</span></h1></div><button id="adminButton" class="admin-button">⚙ 管理</button>
+</div>
+</header>
+<main>
+<!-- Loading -->
+<div id="loading" class="loading"><div class="loading-spinner"></div><p>Ranking Loading...</p></div>
+<!-- Ranking -->
+<section id="rankingSection" class="ranking-section hidden"><div class="section-title"><div><p class="eyebrow">CURRENT RANKING</p><h2>現在のランキング</h2></div><button id="refreshButton" class="refresh-button">↻ 更新</button></div>
+<!-- TOP 3 -->
+<div id="topThree" class="top-three"></div>
+<!-- Other Rankings -->
+<div id="rankingList" class="ranking-list"></div>
+</section>
+<!-- Admin -->
+<section id="adminSection" class="admin-section hidden">
+<div class="admin-header">
+<div><p class="eyebrow">ADMINISTRATION</p><h2>管理画面</h2></div>
+<button id="logoutButton" class="logout-button">管理モード終了</button></div>
+<!-- Add Member -->
+<div class="admin-card"><h3>＋ メンバー追加</h3><form id="addMemberForm"><div class="form-row"><div class="form-group"><label for="memberName">メンバー名</label>
+<input id="memberName" type="text"placeholder="例：Player A" maxlength="30"required></div><div class="form-group"><label for="memberScore">Score</label><input id="memberScore" type="number" min="0" placeholder="520" required></div>
+</div><button type="submit" class="primary-button">メンバーを追加</button></div>
+<!-- Member Management -->
+<div class="admin-card"><h3>メンバー管理</h3><div id="adminMemberList"></div></div></section></main>
+<!-- Admin Login Modal -->
+<div id="loginModal" class="modal hidden"><div class="modal-overlay"></div><div class="modal-box"><button id="closeModal" class="modal-close">×</button><p class="eyebrow">ADMIN ACCESS</p>
+<h2>Admin Login</h2><p class="modal-description">管理操作を行うには管理PINを入力してください。</p>
+<form id="loginForm"><input id="adminPin" type="password" inputmode="numeric" placeholder="管理PIN" autocomplete="off" required>
+<button type="submit" class="primary-button">管理画面へ</button></form><p id="loginError" class="error-message"></p></div></div>
+<!-- Score Edit Modal -->
+<div id="editModal" class="modal hidden"><div class="modal-overlay"></div><div class="modal-box"><button id="closeEditModal" class="modal-close">×</button><p class="eyebrow">UPDATE SCORE</p><h2 id="editMemberName">スコア変更</h2><form id="editScoreForm">
+<input id="editScore" type="number" min="0" placeholder="新しいスコア" required>
+<button type="submit" class="primary-button">スコアを更新</button></form></div></div>
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
 </body>
 </html>
